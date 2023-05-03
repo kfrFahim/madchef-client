@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
@@ -10,6 +10,9 @@ const Login = () => {
      const auth = getAuth(app);
      const provider = new GoogleAuthProvider();
      const githubProvider = new GithubAuthProvider();
+
+     const location = useLocation()
+     const from = location.state?.from?.pathname || "/";
 
      const navigate = useNavigate()
      const {signIn} = useContext(AuthContext);
@@ -29,7 +32,7 @@ const Login = () => {
           const loggedUser = result.user;
           console.log(loggedUser)
           form.reset();
-          navigate("/")
+          navigate(from);
        })
        .catch(error => {
           console.log(error);
