@@ -54,6 +54,16 @@ const Login = () => {
           })
           .catch(error => {error})
      }
+
+     const handleGithubSignIn = () => {
+          signInWithPopup(auth , githubProvider)
+          .then(result => {
+               const user = result.user
+               console.log(user)
+               nevigate("/")
+          })
+          .catch(error => {error})
+     }
    
 
      return (

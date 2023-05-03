@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
@@ -21,14 +21,12 @@ const Register = () => {
      setError("Your Password Didn't match")
      return
   }
-  else if(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/){
-     setError("Your Password not valid")
-  }
 
   createUser(email, password)
   .then(result => {
      const loggedUser = result.user;
      console.log(loggedUser)
+     nevigate("/login")
      form.reset();
   })
   .catch(error => {
