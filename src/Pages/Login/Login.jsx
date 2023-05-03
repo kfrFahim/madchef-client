@@ -76,7 +76,7 @@ const Login = () => {
             <h1 className='my-4 text-2xl font-bold text-center '>Login With</h1>
             <div className='flex justify-center gap-3 '>
             <button onClick={handleGoogleSignIn} className='btn normal-case btn-info mb-2' > <FaGoogle />Login with Google</button>
-            <button  className='btn normal-case' > <FaGithub></FaGithub>Login with Github</button>
+            <button onClick={handleGithubSignIn} className='btn normal-case' > <FaGithub></FaGithub>Login with Github</button>
             </div>
 
                <p className='ml-[40px]'><small className='text-sm' >New to MadChef Kekappa ? <Link className='text-blue-500 text-sm' to="/register">Register Here</Link> </small></p>
