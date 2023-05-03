@@ -11,13 +11,11 @@ const CardItems = () => {
      .then(data => setChefdata(data))
   } , [])
 
-     console.log(chefdata);
-
      return ( 
 
 <div className='mx-14 my-6 gap-5 grid grid-cols md:grid-cols-3'>
      {
-          chefdata.map(cdata => <div className=''> 
+          chefdata.map(cdata => <div key={cdata.id} className=''> 
                <div className=" card w-full border">
           <figure className="px-10 pt-10">
             <img src={cdata.chefPicture} className="rounded-full w-28 h-28" />

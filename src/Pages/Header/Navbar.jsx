@@ -30,7 +30,7 @@ const Header = () => {
 
           </div>
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 hover:text-orange-600 ">
-          MadChef Kekappa
+          MadChef
           </span>
         </Link>
         <ul className="items-center hidden space-x-8 lg:flex font-semibold">
@@ -76,13 +76,10 @@ const Header = () => {
         </div>
         <div className="w-10 rounded-full">
           {
-            user?.photoURL ? <img src={user.photoURL} title={user.displayName} /> : ""
+           user?.photoURL ? <img src={user.photoURL} title={user.displayName} /> : ""
           }
          
         </div>
-        {/* {
-          user && <span> {user.email}  </span>
-        } */}
 </div>
         <div className="lg:hidden">
           <button
