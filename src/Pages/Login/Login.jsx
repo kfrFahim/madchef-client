@@ -75,7 +75,7 @@ const Login = () => {
           
             <h1 className='my-4 text-2xl font-bold text-center '>Login With</h1>
             <div className='flex justify-center gap-3 '>
-            <button  className='btn normal-case btn-info mb-2' > <FaGoogle />Login with Google</button>
+            <button onClick={handleGoogleSignIn} className='btn normal-case btn-info mb-2' > <FaGoogle />Login with Google</button>
             <button  className='btn normal-case' > <FaGithub></FaGithub>Login with Github</button>
             </div>
 
