@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
      return (
-          <div>
+          <div className='relative'>
 <div className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full">
   <img src="https://eatstreet.imgix.net/restaurant_highlight_images/97edea41fc4ffb4a25bbf61e7120132372eb7" className="w-full h-[500px]" />
@@ -32,6 +32,10 @@ const Banner = () => {
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>
+</div>
+
+<div className='absolute top-0 right-0 bottom-0 left-0 m-auto'>
+<h1 className='text-3xl mt-48 text-green-500'>Hello </h1>
 </div>
           </div>
      );
