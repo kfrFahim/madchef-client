@@ -21,7 +21,9 @@ const Register = () => {
      setError("Your Password Didn't match")
      return
   }
-
+  else if(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/){
+     setError("Your Password not valid")
+  }
 
   createUser(email, password)
   .then(result => {
