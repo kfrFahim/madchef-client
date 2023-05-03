@@ -12,9 +12,9 @@ const RecipeDetail = () => {
           .then(res => res.json())
           .then(data => setRecipe(data))
 
-          console.log(recipe);
      },[])
-
+     
+     console.log(recipe);
 
      return (
           <div>

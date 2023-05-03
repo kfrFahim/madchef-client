@@ -21,9 +21,7 @@ const Register = () => {
      setError("Your Password Didn't match")
      return
   }
-  else if(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/){
-     setError("Your Password not valid.")
-  }
+
 
   createUser(email, password)
   .then(result => {
@@ -56,6 +54,17 @@ const Register = () => {
               className="w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
               type="text"
               name="name"
+              id=""
+            />
+          </div>
+          <div>
+            <label className="block my-2" htmlFor="photourl">
+              Photo Url
+            </label>
+            <input
+              className="w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
+              type="text"
+              name="photourl"
               id=""
             />
           </div>

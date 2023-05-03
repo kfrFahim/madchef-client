@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
 
@@ -50,6 +51,14 @@ const Login = () => {
                     </div>
                     <input type='submit' className="btn bg-gradient-to-r from-yellow-400 to-orange-300 w-[400px] h-[55px] text-black font-semibold border-0" value="Login" />
                </form>
+
+          
+            <h1 className='my-4 text-2xl font-bold text-center '>Login With</h1>
+            <div className='flex justify-center gap-3 '>
+            <button className='btn normal-case btn-info mb-2' > <FaGoogle />Login with Google</button>
+            <button className='btn normal-case' > <FaGithub></FaGithub>Login with Github</button>
+            </div>
+
                <p className='ml-[40px]'><small className='text-sm' >New to MadChef Kekappa ? <Link className='text-blue-500 text-sm' to="/register">Register Here</Link> </small></p>
 
                <p className="ml-[40px] my-3 text-red-500">{error}</p>

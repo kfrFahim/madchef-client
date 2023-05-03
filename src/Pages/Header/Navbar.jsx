@@ -33,7 +33,7 @@ const Header = () => {
           MadChef Kekappa
           </span>
         </Link>
-        <ul className="items-center hidden space-x-8 lg:flex font-medium">
+        <ul className="items-center hidden space-x-8 lg:flex font-semibold">
         <li>
             <NavLink
               to="/"
@@ -51,17 +51,7 @@ const Header = () => {
               title="statistics"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
-              Statistics
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/appliedjobs"
-              aria-label="Applied Jobs"
-              title="Applied Jobs"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              Applied Jobs
+              Contact
             </NavLink>
           </li>
           <li>
@@ -85,7 +75,10 @@ const Header = () => {
   
         </div>
         <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          {
+            user?.photoURL ? <img src={user.photoURL} title={user.displayName} /> : ""
+          }
+         
         </div>
         {/* {
           user && <span> {user.email}  </span>
@@ -120,8 +113,8 @@ const Header = () => {
                   <div>
                     <Link
                       to="/"
-                      aria-label="JobHunt"
-                      title="JobHunt"
+                      aria-label="MadChef Kekappa"
+                      title="MadChef Kekapp"
                       className="inline-flex items-center"
                     >
                       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-200">
@@ -135,7 +128,7 @@ const Header = () => {
                         </svg>
                       </div>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        JH
+                        Kekappa
                       </span>
                     </Link>
                   </div>
@@ -170,25 +163,14 @@ const Header = () => {
                     <li>
                       <Link
                         to="/statistics"
-                        aria-label="Statistics"
-                        title="statistics"
+                        aria-label="Contact"
+                        title="contact"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Statistics
+                        Contact
                       </Link>
                     </li>
 
-
-                    <li>
-                      <Link
-                        to="/appliedjobs"
-                        aria-label="Applied Jobs"
-                        title="Applied Jobs"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Applied Jobs
-                      </Link>
-                    </li>
                     <li>
                       <Link
                         to="/blog"

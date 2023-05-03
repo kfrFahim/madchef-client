@@ -18,16 +18,21 @@ const CardItems = () => {
 <div className='mx-14 my-6 gap-5 grid grid-cols md:grid-cols-3'>
      {
           chefdata.map(cdata => <div className=''> 
-               <div className=" card w-96 bg-base-100 shadow-xl">
+               <div className=" card w-full border">
           <figure className="px-10 pt-10">
-            <img src={cdata.chefPicture} className="rounded-xl w-24 h-24" />
+            <img src={cdata.chefPicture} className="rounded-full w-28 h-28" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">{cdata.chefName}</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+               
+          <p className='text-[16px] font-semibold '>Experience : {cdata.yearsOfExperience} Years </p>
+          <div className='flex gap-3'>
+            <p>Recipes : {cdata.numberOfRecipes}</p>
+            <p>Likes : {cdata.likes}</p>
+               </div>
             <div className="card-actions">
 
-               <Link to={`/recipedetails`}> <button  className="btn btn-primary">Buy Now</button> </Link>
+               <Link to={`/recipedetails/${cdata.id}`}> <button  className="btn btn-primary normal-case">Recipes</button> </Link>
               
             </div>
           </div>
