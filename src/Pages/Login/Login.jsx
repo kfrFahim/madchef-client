@@ -11,7 +11,7 @@ const Login = () => {
      const provider = new GoogleAuthProvider();
      const githubProvider = new GithubAuthProvider();
 
-     const nevigate = useNavigate()
+     const navigate = useNavigate()
      const {signIn} = useContext(AuthContext);
      
      const [error , setError] = useState("")
@@ -29,7 +29,7 @@ const Login = () => {
           const loggedUser = result.user;
           console.log(loggedUser)
           form.reset();
-          nevigate("/")
+          navigate("/")
        })
        .catch(error => {
           console.log(error);

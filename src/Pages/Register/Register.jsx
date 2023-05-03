@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
 
      const [error , setError] = useState("");
      const {createUser}= useContext(AuthContext);
-
+     
+     const navigate = useNavigate();
+     
   const handleRegister = (event) => {
     event.preventDefault();
 
@@ -26,9 +28,9 @@ const Register = () => {
   .then(result => {
      const loggedUser = result.user;
      console.log(loggedUser)
-     nevigate("/login")
      form.reset();
-  })
+     navigate("/login")
+    })
   .catch(error => {
     console.log(error);
     setError(error.message);
@@ -45,7 +47,7 @@ const Register = () => {
         <h1 className="text-4xl text-center font-semibold text-orange-300">
           Register
         </h1>
-        <form className="ml-[40px] my-8" onSubmit={handleRegister}>
+        <form className="ml-[40px] my-4" onSubmit={handleRegister}>
           <div>
             <label className="block" htmlFor="name">
               Name
