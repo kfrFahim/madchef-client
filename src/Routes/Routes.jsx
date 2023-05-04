@@ -6,7 +6,10 @@ import Register from "../Pages/Register/Register";
 import RecipeDetail from "../Pages/RecipeDetails/RecipeDetail";
 import Error from "../Pages/Error/Error";
 import PrivateRoute from "./PrivateRoute";
-import Blog from "../Pages/Blog/Blog";
+import React from "react";
+// import Blog from "../Pages/Blog/Blog";
+
+const LazyBlog = React.lazy(()=> import('./../Pages/Blog/Blog'))
 
 const router = createBrowserRouter([
      {
@@ -31,7 +34,9 @@ const router = createBrowserRouter([
                },
                {
                     path:"/blog",
-                    element:<Blog></Blog>
+                    element:<React.Suspense fallback="loading...">
+                         <LazyBlog></LazyBlog>
+                    </React.Suspense>
                },
                {
                     path:"*",
