@@ -4,7 +4,7 @@ import { FaGoogle,FaGithub,FaLinkedin,FaTwitter} from "react-icons/fa";
 
 const Footer = () => {
      return (
-          <div className='mx-14 bg-slate-900 my-5 p-5'>
+          <div className='mx-14 bg-[#585858] my-5 p-5'>
                <div className='grid grid-cols md:grid-cols-3 mx-auto'>
                     <div className='mx-auto text-white'>
                          <h1 className='text-3xl my-3'>About</h1>
@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
                     <div className='mx-auto text-white'>
                          <h1 className='text-3xl my-3 text-center'>MadChef</h1>
-                         <Link to="/register"><p className='my-8 text-center'>SIGN UP FOR EMAILS AND UPDATES!!</p></Link>
+                         <Link to="/register"><p className='my-8 text-center border p-2'>SIGN UP FOR EMAILS AND UPDATES!!</p></Link>
                     </div >
                     <div className='mx-auto text-white'>
                     <h1 className='text-3xl text-center my-3'>Contact</h1>

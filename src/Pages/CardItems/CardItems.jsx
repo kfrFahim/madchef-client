@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaThumbsUp } from "react-icons/fa";
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const CardItems = () => {
   const [chefdata, setChefdata] = useState([]);
+  const [rating, setRating] = useState(0)
 
   useEffect(() => {
     fetch("https://madachef-kekappa-server.vercel.app/chefdata/")
@@ -38,6 +41,7 @@ const CardItems = () => {
               <p> {cdata.likes}</p>
             </div>
               </div>
+              <Rating className="my-4" style={{ maxWidth: 100 }} value={rating} onChange={setRating} />
               <div className="card-actions">
                 <Link to={`/recipedetails/${cdata.id}`}>
                   {" "}
