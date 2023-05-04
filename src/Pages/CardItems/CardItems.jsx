@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaThumbsUp } from "react-icons/fa";
 
 const CardItems = () => {
   const [chefdata, setChefdata] = useState([]);
@@ -30,9 +31,12 @@ const CardItems = () => {
               <p className="text-[16px] font-semibold ">
                 Experience : {cdata.yearsOfExperience} Years{" "}
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-6">
                 <p>Recipes : {cdata.numberOfRecipes}</p>
-                <p>Likes : {cdata.likes}</p>
+                <div className="flex items-center gap-2">
+              <FaThumbsUp className="items-center"></FaThumbsUp>
+              <p> {cdata.likes}</p>
+            </div>
               </div>
               <div className="card-actions">
                 <Link to={`/recipedetails/${cdata.id}`}>

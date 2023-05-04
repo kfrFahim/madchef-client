@@ -43,7 +43,7 @@ const Register = () => {
 
   return (
     <div>
-      <div className="w-[500px] h-[500px] my-[50px] mx-auto border-2 shadow shadow-blue-500/40 hover:shadow-indigo-500/40">
+      <div className="md:w-[500px] md:h-[500px] my-[50px] mx-auto border-2 shadow shadow-blue-500/40 hover:shadow-indigo-500/40">
         <h1 className="text-4xl text-center font-semibold text-orange-300">
           Register
         </h1>
@@ -53,7 +53,7 @@ const Register = () => {
               Name
             </label>
             <input
-              className="w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
+              className="md:w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
               type="text"
               name="name"
               id=""
@@ -64,7 +64,7 @@ const Register = () => {
               Photo Url
             </label>
             <input
-              className="w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
+              className="md:w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
               type="text"
               name="photourl"
               id=""
@@ -75,7 +75,7 @@ const Register = () => {
               Email
             </label>
             <input
-              className="w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
+              className="md:w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
               type="email"
               name="email"
               id=""
@@ -87,7 +87,7 @@ const Register = () => {
               Password
             </label>
             <input
-              className="w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
+              className="md:w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
               type="password"
               name="password"
               id=""
@@ -99,7 +99,7 @@ const Register = () => {
               Confirm Password
             </label>
             <input
-              className="w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
+              className="md:w-[400px] h-[35px] border-2 border-black text-xl pl-4 rounded"
               type="password"
               name="confirm"
               id=""
@@ -108,7 +108,7 @@ const Register = () => {
           </div>
           <input
             type="submit"
-            className="btn bg-gradient-to-r from-yellow-400 to-orange-300 w-[400px] h-[35px] text-black font-semibold border-0"
+            className="btn bg-gradient-to-r from-yellow-400 to-orange-300 md:w-[400px] h-[35px] text-black font-semibold border-0"
             value="Register"
           />
         </form>

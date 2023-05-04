@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaGoogle,FaGithub,FaLinkedin,FaTwitter} from "react-icons/fa";
 
 const Footer = () => {
      return (
@@ -6,18 +8,32 @@ const Footer = () => {
                <div className='grid grid-cols md:grid-cols-3 mx-auto'>
                     <div className='mx-auto text-white'>
                          <h1 className='text-3xl my-3'>About</h1>
-                         <ul className=''>
+                         <ul className='text-sm mb-3'>
                               <li><a href="#">PRIVACY POLICY</a></li>
-                              <li><a href="#">DISCLOSURE</a> </li>
+                              <li className='my-3'><a href="#">DISCLOSURE</a> </li>
                               <li><a href="#">TERMS OF USE</a></li>
-                              <li><a href="#">ACCESSIBILITY STATEMENT</a></li>
+                              <li className='my-3'><a href="#">ACCESSIBILITY STATEMENT</a></li>
                          </ul>
+                         
                     </div>
-                    <div>
-                         <h1>MadChef</h1>
+                    <div className='mx-auto text-white'>
+                         <h1 className='text-3xl my-3 text-center'>MadChef</h1>
+                         <Link to="/register"><p className='my-8 text-center'>SIGN UP FOR EMAILS AND UPDATES!!</p></Link>
+                    </div >
+                    <div className='mx-auto text-white'>
+                    <h1 className='text-3xl text-center my-3'>Contact</h1>
+
+                    <ul className='grid grid-cols-2 gap-5 ml-4'>
+                         <li className='my-3 text-2xl'> <FaGithub></FaGithub> </li>
+                         <li className='my-3 text-2xl'> <FaLinkedin></FaLinkedin> </li>
+                         <li className='my-3 text-2xl' ><FaGoogle></FaGoogle></li>
+                         <li className='my-3 text-2xl'> <FaTwitter></FaTwitter> </li>
+                    </ul>
+
                     </div>
-                    <div>Contact</div>
                </div>
+
+               <h1 className='text-center my-8'>© 2023 CHEF SERVICE ALL RIGHTS RESERVED. PROTECTED BY INTELLECTUAL PROPERTY LAW.</h1>
           </div>
      );
 };

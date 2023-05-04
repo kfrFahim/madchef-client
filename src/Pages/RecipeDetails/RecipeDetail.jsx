@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaThumbsUp } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RecipeDetail = () => {
   const { id } = useParams();
@@ -32,33 +32,45 @@ const RecipeDetail = () => {
         <div className="text-center">
           <h2 className="text-4xl my-5">{recipe.chefName}</h2>
 
-          <p className="my-3"> {recipe.chefName} may have first donned her whites at twenty-seven, but she has since worked in the kitchens of Gordon Ramsay and Clare Smyth, been mentored by Angela Hartnett and headed up Michelin-starred Italian restaurant Murano. Today, she is at the helm of her woodfire-focused restaurant Hicce at Kings Cross and Islington pub Hicce Hart.</p>
+          <p className="my-3">
+            {" "}
+            {recipe.chefName} may have first donned her whites at twenty-seven,
+            but she has since worked in the kitchens of Gordon Ramsay and Clare
+            Smyth, been mentored by Angela Hartnett and headed up
+            Michelin-starred Italian restaurant Murano. Today, she is at the
+            helm of her woodfire-focused restaurant Hicce at Kings Cross and
+            Islington pub Hicce Hart.
+          </p>
 
           <p className="text-[16px] font-semibold my-5">
             Experience : {recipe.yearsOfExperience} Years{" "}
           </p>
           <div className="flex gap-12 justify-center">
             <p>Recipes : {recipe.numberOfRecipes}</p>
-<div className="flex items-center gap-2">            <FaThumbsUp className="items-center"></FaThumbsUp>
-            <p> {recipe.likes}</p></div>
+            <div className="flex items-center gap-2">
+              <FaThumbsUp className="items-center"></FaThumbsUp>
+              <p> {recipe.likes}</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <h1 className='text-4xl text-center font-medium mt-[80px]'>LATEST RECIPES FROM OUR CHEF'S</h1>
-<hr className="w-48 h-1 mx-auto my-20 bg-black" />
+      <h1 className="text-4xl text-center font-medium mt-[80px]">
+        LATEST RECIPES FROM OUR CHEF'S
+      </h1>
+      <hr className="w-48 h-1 mx-auto my-20 bg-black" />
 
       <div className="border bg-slate-200 my-4">
         <div className="card-body">
-<div className="text-center">
-<h2 className=" text-4xl"> {recipe.name1}</h2>
-          <p className="font-bold text-[17px] my-5">
-            Description :{" "}
-            <span className="font-medium text-[15px]">
-              {recipe.description1}
-            </span>
-          </p>
-</div>
+          <div className="text-center">
+            <h2 className=" text-4xl"> {recipe.name1}</h2>
+            <p className="font-bold text-[17px] my-5">
+              Description :{" "}
+              <span className="font-medium text-[15px]">
+                {recipe.description1}
+              </span>
+            </p>
+          </div>
           <div className="grid grid-cols md:grid-cols-2 ">
             <figure>
               <img
@@ -82,7 +94,9 @@ const RecipeDetail = () => {
                 </span>
               </p>
               <div className="card-actions justify-end">
-                <button onClick={notify} className="btn">Favourite</button>
+                <button onClick={notify} className="btn">
+                  Favourite
+                </button>
                 <ToastContainer />
               </div>
             </div>
@@ -93,15 +107,15 @@ const RecipeDetail = () => {
       <div>
         <div className="border bg-slate-200">
           <div className="card-body">
-          <div className="text-center">
-<h2 className=" text-4xl"> {recipe.name2}</h2>
-          <p className="font-bold text-[17px] my-5">
-            Description :{" "}
-            <span className="font-medium text-[15px]">
-              {recipe.description2}
-            </span>
-          </p>
-</div>
+            <div className="text-center">
+              <h2 className=" text-4xl"> {recipe.name2}</h2>
+              <p className="font-bold text-[17px] my-5">
+                Description :{" "}
+                <span className="font-medium text-[15px]">
+                  {recipe.description2}
+                </span>
+              </p>
+            </div>
             <div className="grid grid-cols md:grid-cols-2 ">
               <figure>
                 <img
@@ -125,7 +139,9 @@ const RecipeDetail = () => {
                   </span>
                 </p>
                 <div className="card-actions justify-end">
-                <button onClick={notify} className="btn">Favourite</button>
+                  <button onClick={notify} className="btn">
+                    Favourite
+                  </button>
                 </div>
               </div>
             </div>
@@ -135,15 +151,15 @@ const RecipeDetail = () => {
       <div>
         <div className="border bg-slate-200 my-4">
           <div className="card-body">
-          <div className="text-center">
-<h2 className=" text-4xl"> {recipe.name2}</h2>
-          <p className="font-bold text-[17px] my-5">
-            Description :{" "}
-            <span className="font-medium text-[15px]">
-              {recipe.description2}
-            </span>
-          </p>
-</div>
+            <div className="text-center">
+              <h2 className=" text-4xl"> {recipe.name2}</h2>
+              <p className="font-bold text-[17px] my-5">
+                Description :{" "}
+                <span className="font-medium text-[15px]">
+                  {recipe.description2}
+                </span>
+              </p>
+            </div>
             <div className="grid grid-cols md:grid-cols-2 ">
               <figure>
                 <img
@@ -167,7 +183,9 @@ const RecipeDetail = () => {
                   </span>
                 </p>
                 <div className="card-actions justify-end">
-                <button onClick={notify} className="btn">Favourite</button>
+                  <button onClick={notify} className="btn">
+                    Favourite
+                  </button>
                 </div>
               </div>
             </div>

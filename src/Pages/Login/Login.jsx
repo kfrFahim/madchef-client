@@ -70,19 +70,19 @@ const Login = () => {
    
 
      return (
-          <div className='w-[500px] h-[550px] my-[50px] mx-auto border-2 shadow shadow-blue-500/40 hover:shadow-indigo-500/40'>
+          <div className='md:w-[500px] h-[550px] my-[50px] mx-auto border-2 shadow shadow-blue-500/40 hover:shadow-indigo-500/40'>
                <h1 className='text-4xl text-center font-semibold text-orange-300'>Login</h1>
                <form className='ml-[40px] my-4' onSubmit={handleLogin}>
                     <div>
                          <label className='block' htmlFor="email">Email</label>
-                         <input className='w-[400px] h-[55px] border-2 border-black text-xl pl-4 rounded' type="email" name="email" id="" required />
+                         <input className='md:w-[400px] h-[55px] border-2 border-black text-xl pl-4 rounded' type="email" name="email" id="" required />
                     </div>
                     <div className='my-5'>
                          <label className='block' htmlFor="password">Password</label>
-                         <input className='w-[400px] h-[55px] border-2 border-black text-xl pl-4 rounded' type="password" name="password" id="" required />
+                         <input className='md:w-[400px] h-[55px] border-2 border-black text-xl pl-4 rounded' type="password" name="password" id="" required />
                     </div>
-                    <input type='submit' className="btn bg-gradient-to-r from-yellow-400 to-orange-300 w-[400px] h-[55px] text-black font-semibold border-0" value="Login" />
-                    <Link className="btn bg-gradient-to-r from-yellow-400 to-orange-300 w-[400px] h-[55px] text-black font-semibold border-0 mt-1" to="/register"><button>Register Here</button></Link>
+                    <input type='submit' className="btn bg-gradient-to-r from-yellow-400 to-orange-300 md:w-[400px] h-[55px] text-black font-semibold border-0" value="Login" />
+                    <Link className="btn bg-gradient-to-r from-yellow-400 to-orange-300 md:w-[400px] h-[55px] text-black font-semibold border-0 mt-4" to="/register"><button>Register Here</button></Link>
                </form>
 
           
