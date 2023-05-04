@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -28,9 +29,9 @@ const Banner = () => {
             Inspired Recipes For Your Kitchen Table
           </p>
 
-          <button className="bg-[#FAB803] text-[#DB0000] text-base font-semibold md:px-5 md:py-2  rounded hover:bg-[#313131] ">
-            Learn More
-          </button>
+<Link to="/login">          <button className="bg-[#FAB803] text-[#DB0000] text-base font-semibold md:px-5 md:py-2  rounded hover:bg-[#313131] ">
+            Login
+          </button></Link>
         </div>
       </div>
     </div>

@@ -109,7 +109,7 @@ const Review = () => {
                 value={rating}
                 readOnly={setRating}
               />
-              <p>Mar 16, 2022</p>
+              <p>Mar 16, 2023</p>
             </div>
           </div>
           <p>

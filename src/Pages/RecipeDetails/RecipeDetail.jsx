@@ -7,6 +7,15 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 
 const RecipeDetail = () => {
+
+  const [isLiked, setIsLiked] = useState(false)
+
+    const notify = () => {
+        toast("Added in Favorite")
+        setIsLiked(true)
+    }
+
+
   const { id } = useParams();
 
   const [recipe, setRecipe] = useState([]);
@@ -20,7 +29,7 @@ const RecipeDetail = () => {
 
   console.log(recipe);
 
-  const notify = () => toast("Add to Favourite");
+  
 
   return (
     <div className="mx-14">
@@ -63,59 +72,44 @@ const RecipeDetail = () => {
       </h1>
       <hr className="w-48 h-1 mx-auto my-20 bg-black" />
 
-      <div className="border bg-slate-200 my-4">
-        <div className="card-body">
-          <div className="text-center">
-            <h2 className=" text-4xl"> {recipe.name1}</h2>
-            <p className="font-bold text-[17px] my-5">
-              Description :{" "}
-              <span className="font-medium text-[15px]">
-                {recipe.description1}
-              </span>
-            </p>
-          </div>
-          <div className="grid grid-cols md:grid-cols-2 ">
-            <figure>
-              <img
-                className="w-80 h-80 mx-auto mt-12 items-center rounded"
-                src={recipe.recipeimg1}
-                alt="Album"
-              />
-            </figure>
+      <div className="grid grid-cols md:grid-cols-2 bg-slate-200 my-4 ">
+              <figure>
+                <img
+                  className="w-80 h-80 mx-auto mt-12 items-center rounded"
+                  src={recipe.recipeimg3}
+                  alt="Album"
+                />
+              </figure>
 
-            <div className="border p-5">
-              <p className="font-bold text-[17px]">
-                Ingredients :{" "}
-                <span className="font-medium text-[15px]">
-                  {recipe.ingredients1}
-                </span>
-              </p>
-              <p className="font-bold text-[17px]">
-                Instructions :{" "}
-                <span className="font-medium text-[15px]">
-                  {recipe.instructions1}
-                </span>
-              </p>
-              <div className="card-actions justify-between">
-                <div className="flex items-center gap-3">
-                  <p>Rating :</p>
-                  <Rating
-                    className="my-4"
-                    style={{ maxWidth: 100 }}
-                    value={rating}
-                    readOnly={setRating}
-                  />
+              <div className="border p-5">
+                <p className="font-bold text-[17px]">
+                  Ingredients :{" "}
+                  <span className="font-medium text-[15px]">
+                    {recipe.ingredients3}
+                  </span>
+                </p>
+                <p className="font-bold text-[17px]">
+                  Instructions :{" "}
+                  <span className="font-medium text-[15px]">
+                    {recipe.instructions3}
+                  </span>
+                </p>
+                <div className="card-actions justify-between">
+                  <div className="flex items-center gap-3">
+                    <p>Rating :</p>
+                    <Rating
+                      className="my-4"
+                      style={{ maxWidth: 100 }}
+                      value={rating}
+                      readOnly={setRating}
+                    />
+                  </div>
+                  <button onClick={notify} className={isLiked ? "opacity-50" : "btn"}>
+                    Favourite
+                  </button>
                 </div>
-
-                <button onClick={notify} className="btn">
-                  Favourite
-                </button>
-                <ToastContainer />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
       <div>
         <div className="border bg-slate-200">
@@ -162,7 +156,7 @@ const RecipeDetail = () => {
                     />
                   </div>
 
-                  <button onClick={notify} className="btn">
+                  <button onClick={notify} className={isLiked ? "opacity-50" : "btn"}>
                     Favourite
                   </button>
                 </div>
@@ -183,6 +177,7 @@ const RecipeDetail = () => {
                 </span>
               </p>
             </div>
+
             <div className="grid grid-cols md:grid-cols-2 ">
               <figure>
                 <img
@@ -215,7 +210,7 @@ const RecipeDetail = () => {
                       readOnly={setRating}
                     />
                   </div>
-                  <button onClick={notify} className="btn">
+                  <button onClick={notify} className={isLiked ? "opacity-50" : "btn"}>
                     Favourite
                   </button>
                 </div>
