@@ -1,14 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate, } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
+  const [error, setError] = useState("");
+  const { createUser } = useContext(AuthContext);
 
-     const [error , setError] = useState("");
-     const {createUser}= useContext(AuthContext);
-     
-     const navigate = useNavigate();
-     
+  const navigate = useNavigate();
+
   const handleRegister = (event) => {
     event.preventDefault();
 
@@ -18,28 +17,34 @@ const Register = () => {
     const password = form.password.value;
     const confirm = form.confirm.value;
 
-    setError('');
-    if(password !== confirm){
-     setError("Your Password Didn't match")
-     return
-  }
+    const regTest = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
-  createUser(email, password)
-  .then(result => {
-     const loggedUser = result.user;
-     console.log(loggedUser)
-     form.reset();
-     navigate("/login")
-    })
-  .catch(error => {
-    console.log(error);
-    setError(error.message);
-  })
+    setError("");
 
+    if (password !== confirm) {
+      setError("Your Password Didn't match");
+      return;
+    } else if (email === "") {
+      setError("Please Enter Email");
+    } else if (password === "") {
+      setError("Please Enter Password");
+    } else if (!regTest.test(password)) {
+      setError("Your Password is not valid");
+    } else {
+      setError("");
+    }
 
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        form.reset("");
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(error.message);
+      });
   };
-
-  
 
   return (
     <div>
@@ -48,6 +53,7 @@ const Register = () => {
           Register
         </h1>
         <form className="ml-[40px] my-4" onSubmit={handleRegister}>
+          <p className="ml-[40px] my-3 text-red-500">{error}</p>
           <div>
             <label className="block" htmlFor="name">
               Name
@@ -120,8 +126,6 @@ const Register = () => {
             </Link>{" "}
           </small>
         </p>
-
-        <p className="ml-[40px] my-3 text-red-500">{error}</p>
       </div>
     </div>
   );

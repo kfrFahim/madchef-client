@@ -8,9 +8,9 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
 
   const override = {
-     display: "block",
-     margin: "200px auto",
-   };
+    display: "block",
+    margin: "200px auto",
+  };
 
   useEffect(() => {
     setLoading(true);

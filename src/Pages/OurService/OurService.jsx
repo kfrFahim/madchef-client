@@ -3,13 +3,13 @@ import React from "react";
 const OurService = () => {
   return (
     <div className="mx-14">
-<h1 className='text-4xl font-medium mt-[80px]'>OUR SERVICES</h1>
-<hr className="w-48 h-1 mx-auto my-10 bg-black" />
+      <h1 className="text-4xl font-medium mt-[80px]">OUR SERVICES</h1>
+      <hr className="w-48 h-1 mx-auto my-10 bg-black" />
 
       <div className="grid grid-cols md:grid-cols-2 gap-5">
         <div className="w-full mx-auto border bg-slate-300 rounded-xl ">
           <figure className="px-10 pt-10">
-            <img 
+            <img
               src="https://static.wixstatic.com/media/277bd845ae0546858b544b2592bdac23.jpg/v1/crop/x_47,y_0,w_460,h_338/fill/w_420,h_315,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Chef%20Preparing%20Meal.jpgg"
               alt="Shoes"
               className="rounded-xl mx-auto"
@@ -37,7 +37,12 @@ const OurService = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Weddings & Events</h2>
             <p>
-            We all know that the secret to hosting a successful event is inviting the right people and serving them incredible food. That’s why your team is so dedicated to working closely with you to create an unforgettable experience that will enhance your event and keep your guests talking about it for years to come. Contact us to start planning your perfect event today.
+              We all know that the secret to hosting a successful event is
+              inviting the right people and serving them incredible food. That’s
+              why your team is so dedicated to working closely with you to
+              create an unforgettable experience that will enhance your event
+              and keep your guests talking about it for years to come. Contact
+              us to start planning your perfect event today.
             </p>
           </div>
         </div>
@@ -53,7 +58,12 @@ const OurService = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Floating Services</h2>
             <p>
-            Want to try something innovative and Tasty? Floating Breakfast or Snacks is a beautiful and fun way to Enjoy Food and Good Flavors. We are here to ensure that it is never boring but always fresh and new! all our products are made-to-order, so the only thing you need to do is select your menu and serving time and enjoy in Paradise
+              Want to try something innovative and Tasty? Floating Breakfast or
+              Snacks is a beautiful and fun way to Enjoy Food and Good Flavors.
+              We are here to ensure that it is never boring but always fresh and
+              new! all our products are made-to-order, so the only thing you
+              need to do is select your menu and serving time and enjoy in
+              Paradise
             </p>
           </div>
         </div>
@@ -69,7 +79,9 @@ const OurService = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Bartender Services</h2>
             <p>
-            Whether you’re hosting a party or simply desperate for a fresh Cocktail menu, this service brings the most delicious and creative concepts straight to your Happy Hour, with no fuss involved.
+              Whether you’re hosting a party or simply desperate for a fresh
+              Cocktail menu, this service brings the most delicious and creative
+              concepts straight to your Happy Hour, with no fuss involved.
             </p>
           </div>
         </div>

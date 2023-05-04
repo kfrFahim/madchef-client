@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 import { FaThumbsUp } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Rating } from '@smastrom/react-rating'
-import '@smastrom/react-rating/style.css'
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 const RecipeDetail = () => {
   const { id } = useParams();
 
   const [recipe, setRecipe] = useState([]);
-  const [rating, setRating] = useState(4)
+  const [rating, setRating] = useState(4);
 
   useEffect(() => {
     fetch(`https://madachef-kekappa-server.vercel.app/chefdata/${id}`)
@@ -97,11 +97,16 @@ const RecipeDetail = () => {
                 </span>
               </p>
               <div className="card-actions justify-between">
-              <div className="flex items-center gap-3">
-  <p>Rating :</p> 
-  <Rating className="my-4" style={{ maxWidth: 100 }} value={rating} readOnly={setRating} />
-</div>
-       
+                <div className="flex items-center gap-3">
+                  <p>Rating :</p>
+                  <Rating
+                    className="my-4"
+                    style={{ maxWidth: 100 }}
+                    value={rating}
+                    readOnly={setRating}
+                  />
+                </div>
+
                 <button onClick={notify} className="btn">
                   Favourite
                 </button>
@@ -147,11 +152,16 @@ const RecipeDetail = () => {
                   </span>
                 </p>
                 <div className="card-actions justify-between">
-                <div className="flex items-center gap-3">
-  <p>Rating :</p> 
-  <Rating className="my-4" style={{ maxWidth: 100 }} value={rating} readOnly={setRating} />
-</div>
-       
+                  <div className="flex items-center gap-3">
+                    <p>Rating :</p>
+                    <Rating
+                      className="my-4"
+                      style={{ maxWidth: 100 }}
+                      value={rating}
+                      readOnly={setRating}
+                    />
+                  </div>
+
                   <button onClick={notify} className="btn">
                     Favourite
                   </button>
@@ -196,10 +206,15 @@ const RecipeDetail = () => {
                   </span>
                 </p>
                 <div className="card-actions justify-between">
-<div className="flex items-center gap-3">
-  <p>Rating :</p> 
-  <Rating className="my-4" style={{ maxWidth: 100 }} value={rating} readOnly={setRating} />
-</div>
+                  <div className="flex items-center gap-3">
+                    <p>Rating :</p>
+                    <Rating
+                      className="my-4"
+                      style={{ maxWidth: 100 }}
+                      value={rating}
+                      readOnly={setRating}
+                    />
+                  </div>
                   <button onClick={notify} className="btn">
                     Favourite
                   </button>

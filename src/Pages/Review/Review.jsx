@@ -42,7 +42,7 @@ const Review = () => {
         </div>
 
         <div className="bg-white shadow p-3">
-        <div className="flex justify-center mb-3">
+          <div className="flex justify-center mb-3">
             <img
               className="w-6 h-6"
               src="https://s3.romw-cdn.co/media/1/1422/14212885/conversions/ACB-R5Srvpid08d2VRPY0TZPCrsRc7HplejvishdGMm9fA=s240-c-c0x00000000-cc-rp-mo-br100-60px.png"
@@ -60,14 +60,15 @@ const Review = () => {
             </div>
           </div>
           <p>
-
-          We received this service as a gift. 5 stars!! Would highly recommend for personal and professional occasions.The chefs introduced each course and their bubbly energetic personalities made everything outstanding!
-          
+            We received this service as a gift. 5 stars!! Would highly recommend
+            for personal and professional occasions.The chefs introduced each
+            course and their bubbly energetic personalities made everything
+            outstanding!
           </p>
         </div>
 
         <div className="bg-white shadow p-3">
-        <div className="flex justify-center mb-3">
+          <div className="flex justify-center mb-3">
             <img
               className="w-6 h-6"
               src="https://s3.romw-cdn.co/media/1/1422/14212885/conversions/ACB-R5Srvpid08d2VRPY0TZPCrsRc7HplejvishdGMm9fA=s240-c-c0x00000000-cc-rp-mo-br100-60px.png"
@@ -85,14 +86,16 @@ const Review = () => {
             </div>
           </div>
           <p>
-            
-          A customer for years, Atlanta Personal Chef Service has created & delivered several fabulous meals for book clubs, supper clubs, and dinner parties. Their food is tasty and delicious! APCS has wonderful presentation and easy to follow re-heat instructions. *****
-          
+            A customer for years, Atlanta Personal Chef Service has created &
+            delivered several fabulous meals for book clubs, supper clubs, and
+            dinner parties. Their food is tasty and delicious! APCS has
+            wonderful presentation and easy to follow re-heat instructions.
+            *****
           </p>
         </div>
 
         <div className="bg-white shadow p-3">
-        <div className="flex justify-center mb-3">
+          <div className="flex justify-center mb-3">
             <img
               className="w-6 h-6"
               src="https://s3.romw-cdn.co/media/1/1422/14212885/conversions/ACB-R5Srvpid08d2VRPY0TZPCrsRc7HplejvishdGMm9fA=s240-c-c0x00000000-cc-rp-mo-br100-60px.png"
@@ -110,9 +113,12 @@ const Review = () => {
             </div>
           </div>
           <p>
-            
-          What an amazing night with Chef Jason and Chel. The Cauliflower soup was to die for with homemade Parmesan crisp and truffle oil as topping, the salad was delicious followed by steak and lobster as our entree. The chess pie was so delicious and paired amazing with a nice bottle of cab!  The chefs introduced each course and their bubbly energetic personalities made everything outstanding!
-          
+            What an amazing night with Chef Jason and Chel. The Cauliflower soup
+            was to die for with homemade Parmesan crisp and truffle oil as
+            topping, the salad was delicious followed by steak and lobster as
+            our entree. The chess pie was so delicious and paired amazing with a
+            nice bottle of cab! The chefs introduced each course and their
+            bubbly energetic personalities made everything outstanding!
           </p>
         </div>
       </div>

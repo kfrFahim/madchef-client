@@ -2,18 +2,15 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-
 const Header = () => {
-  const {user , logOut} = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogOut = () => {
     logOut()
-    .then(result => {})
-    .catch(error => console.log(error))
-  } 
-
-
+      .then((result) => {})
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className=" py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-14 lg:px-8">
@@ -25,21 +22,27 @@ const Header = () => {
           className="inline-flex items-center"
         >
           <div className="flex items-center justify-center w-14 h-14">
-
-               <img className="w-14 h-14 rounded-full" src="https://img.freepik.com/premium-vector/mad-chef-esport-logo_268276-19.jpg" alt="" />
-
+            <img
+              className="w-14 h-14 rounded-full"
+              src="https://img.freepik.com/premium-vector/mad-chef-esport-logo_268276-19.jpg"
+              alt=""
+            />
           </div>
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 hover:text-orange-600 ">
-          MadChef
+            MadChef
           </span>
         </Link>
         <ul className="items-center hidden space-x-8 lg:flex font-semibold">
-        <li>
+          <li>
             <NavLink
               to="/"
               aria-label="Home"
               title="Home"
-              className={({ isActive }) => (isActive ? "bg-blue-600 px-5 py-2 text-white rounded-lg" : "default")}
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-blue-600 px-5 py-2 text-white rounded-lg"
+                  : "default"
+              }
             >
               Home
             </NavLink>
@@ -49,7 +52,11 @@ const Header = () => {
               to="/statistics"
               aria-label="Statistics"
               title="statistics"
-              className={({ isActive }) => (isActive ? "bg-blue-600 px-5 py-2 text-white rounded-lg" : "default")}
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-blue-600 px-5 py-2 text-white rounded-lg"
+                  : "default"
+              }
             >
               Contact
             </NavLink>
@@ -59,28 +66,42 @@ const Header = () => {
               to="/blog"
               aria-label="Blog"
               title="Blog"
-              className={({ isActive }) => (isActive ? "bg-blue-600 px-5 py-2 text-white rounded-lg" : "default")}
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-blue-600 px-5 py-2 text-white rounded-lg"
+                  : "default"
+              }
             >
               Blog
             </NavLink>
           </li>
         </ul>
-<div className="flex gap-5 items-center">
-<div className="flex gap-5 justify-between ">
-
-  {
-    user?.email ? (<Link className="block bg-orange-400 px-7 py-2 rounded-md text-white font-medium"><button className="bg-orange-" onClick={handleLogOut} >Sign Out</button></Link>) : (<Link className="block bg-orange-400 px-7 py-2 rounded-md text-white font-medium" to="/login"> <button> Login </button> </Link> )
-  }
-          
-  
+        <div className="flex gap-5 items-center">
+          <div className="flex gap-5 justify-between ">
+            {user?.email ? (
+              <Link className="block bg-orange-400 px-7 py-2 rounded-md text-white font-medium">
+                <button className="bg-orange-" onClick={handleLogOut}>
+                  Sign Out
+                </button>
+              </Link>
+            ) : (
+              <Link
+                className="block bg-orange-400 px-7 py-2 rounded-md text-white font-medium"
+                to="/login"
+              >
+                {" "}
+                <button> Login </button>{" "}
+              </Link>
+            )}
+          </div>
+          <div className="w-10 rounded-full">
+            {user?.photoURL ? (
+              <img src={user.photoURL} title={user.displayName} />
+            ) : (
+              ""
+            )}
+          </div>
         </div>
-        <div className="w-10 rounded-full">
-          {
-           user?.photoURL ? <img src={user.photoURL} title={user.displayName} /> : ""
-          }
-         
-        </div>
-</div>
         <div className="lg:hidden">
           <button
             aria-label="Open Menu"
@@ -147,7 +168,7 @@ const Header = () => {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                  <li>
+                    <li>
                       <Link
                         to="/"
                         aria-label="Home"
@@ -189,7 +210,4 @@ const Header = () => {
   );
 };
 
-
 export default Header;
-
-
