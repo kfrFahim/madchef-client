@@ -1,12 +1,35 @@
-import React from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import React, { useState } from "react";
 
 const Blog = () => {
+
+
+     const [loader , setLoader] = useState(false)
+
+     const downloadPDF = () => {
+          const capture = document.querySelector('.all-blogs');
+          setLoader(true);
+          html2canvas(capture).then((canvas) => {
+               const imageData = canvas.toDataURL("img/png");
+               const doc = new jsPDF('p' , 'mm' , 'a4');
+               const componantWidth = doc.internal.pageSize.getWidth();
+               const componantHeight = doc.internal.pageSize.getHeight();
+               doc.addImage(imageData, 'PNG' , 0 , 0 , componantWidth ,componantHeight);
+               setLoader(false);
+               doc.save('blogs.pdf')
+          })
+     }
+
+
+
   return (
     <div className="mx-14">
       <h1 className="text-4xl text-center font-medium mt-[80px]">Blogs</h1>
       <hr className="w-48 h-1 mx-auto my-10 bg-black" />
 
-      <div className="border-2 my-3 p-5">
+<div className="all-blogs">
+<div className="border-2 my-3 p-5">
       <h1 className="text-2xl my-4">
         The differences between uncontrolled and controlled components
       </h1>
@@ -75,6 +98,15 @@ Express.js is a web framework for Node.js that simplifies the process of buildin
       </p>
 
 
+      </div>
+</div>
+
+      <div className="flex justify-center my-10">
+          <button className="btn " onClick={downloadPDF} disabled={!(loader === false)}>
+               {
+                    loader?  ( <span>Downloading</span> ) : ( <span>Download PDF</span> )
+               }
+          </button>
       </div>
     </div>
   );
