@@ -26,7 +26,7 @@ const Review = () => {
                 className="my-4 ml-5"
                 style={{ maxWidth: 100 }}
                 value={rating}
-                onChange={setRating}
+                readOnly={setRating}
               />
               <p>Apr 25, 2022</p>
             </div>
@@ -54,7 +54,7 @@ const Review = () => {
                 className="my-4 ml-5"
                 style={{ maxWidth: 100 }}
                 value={rating}
-                onChange={setRating}
+                readOnly={setRating}
               />
               <p>Sep 5, 2022</p>
             </div>
@@ -79,7 +79,7 @@ const Review = () => {
                 className="my-4 ml-5"
                 style={{ maxWidth: 100 }}
                 value={rating}
-                onChange={setRating}
+                readOnly={setRating}
               />
               <p>Feb 25, 2023</p>
             </div>
@@ -104,7 +104,7 @@ const Review = () => {
                 className="my-4 ml-5"
                 style={{ maxWidth: 100 }}
                 value={rating}
-                onChange={setRating}
+                readOnly={setRating}
               />
               <p>Mar 16, 2022</p>
             </div>

@@ -6,6 +6,7 @@ import Register from "../Pages/Register/Register";
 import RecipeDetail from "../Pages/RecipeDetails/RecipeDetail";
 import Error from "../Pages/Error/Error";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
      {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
                {
                     path:"/recipedetails/:id",
                     element:<PrivateRoute><RecipeDetail></RecipeDetail></PrivateRoute>
+               },
+               {
+                    path:"/blog",
+                    element:<Blog></Blog>
                },
                {
                     path:"*",
